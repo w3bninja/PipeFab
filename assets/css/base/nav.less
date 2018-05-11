@@ -1,0 +1,23 @@
+@width:200px;
+
+.navigation-inner ul, .navigation-inner li{ margin:0; padding:0; }
+/* Level 1 */
+.navigation-inner ul{position:relative; list-style:none;  z-index:9998;
+	li{white-space:normal; list-style:none; zoom:1; margin:0; padding:0;
+		a{ display:block; outline:0; text-decoration:none;}
+		&.hover, &:hover{position:relative;}
+	}
+	/* Level 2 */
+	ul{width:auto; visibility:hidden; position:absolute; top:100%; left:0;
+		li{float:none; font-weight:normal; display:block!important; width:auto;
+			a{min-width:@width!important; display:block!important; width:100%;}
+		}
+		/* Level 3 */
+	 	ul{top:0; left:100%!important;}
+	}
+}
+/* ACCORDION MENU */
+.nav-accordion, .nav-accordion li, .nav-accordion ul{margin:0!important; padding:0; list-style-type:none;}
+.nav-accordion ul{background:rgba(0, 0, 0, .1); display:none;}
+.nav-accordion .subs{position:relative;}
+.nav-accordion .subs i {background:rgba(0, 0, 0, .2); padding:15px; position:absolute; right:0; top:0; bottom:0; cursor:pointer;}

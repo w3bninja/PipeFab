@@ -1,0 +1,131 @@
+.flex-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-flex;
+  /* Safari */
+  display: flex;
+}
+.flex-title {
+  position: absolute;
+  font-size: 18px;
+  margin: auto;
+  text-align: center;
+  transform: rotate(90deg);
+  line-height: 0;
+  width: 0;
+  top: 20px;
+  left: 40px;
+  opacity: 1;
+  white-space: nowrap;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+.flex-content {
+  padding: 40px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 500ms ease;
+}
+.flex-slide {
+  position: relative;
+  background: #EEE;
+  cursor: pointer;
+  -webkit-flex: 1;
+  /* Safari 6.1+ */
+  -ms-flex: 1;
+  /* IE 10 */
+  flex: 1;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+.flex-slide:not(.hover):before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  transition: all 500ms ease;
+}
+.flex-slide:not(.hover):hover:before {
+  display: none;
+  transition: all 500ms ease;
+}
+.flex-slide:not(.hover) {
+  max-width: 100px;
+  transition: all 500ms ease;
+}
+.flex-slide.hover {
+  max-width: 100%;
+  background: #FFF;
+  transition: all 500ms ease;
+}
+.flex-slide.hover .flex-title {
+  opacity: 0;
+  transition: all 500ms ease;
+}
+.flex-slide.hover .flex-content {
+  opacity: 1;
+}
+.controls-flex {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: 999;
+  display: none;
+}
+.controls-flex a {
+  position: absolute;
+}
+.controls-flex .prev-flex {
+  left: 0;
+}
+.controls-flex .next-flex {
+  right: 0;
+}
+@media (max-width: 1600px) {
+  .flex-slide:not(.hover) {
+    max-width: 80px;
+  }
+}
+@media (max-width: 1200px) {
+  .flex-slide:not(.hover) {
+    max-width: 50px;
+  }
+}
+@media (max-width: 1080px) {
+  .controls-flex {
+    display: block;
+  }
+  .flex-slide:not(.hover) {
+    max-width: 100%;
+    opacity: 0;
+    left: 0;
+  }
+  .flex-slide.hover {
+    opacity: 1;
+    left: 0;
+    top: 0;
+  }
+  .flex-container {
+    display: block;
+  }
+  .flex-container .flex-slide {
+    position: absolute!important;
+    width: 100%;
+    height: 100%;
+  }
+}
