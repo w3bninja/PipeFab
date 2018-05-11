@@ -233,6 +233,8 @@ $(window).resize(function() {
 });
 
 $(window).bind("load", function() {
+	$('.header-video').load('header-video.html');
+	
 	setTimeout(function(){
 		$(".bg").animate({'opacity': '1'}, 1000);
 		$('.loader').animate({'opacity': '0'}, 1000, function(){
@@ -274,7 +276,7 @@ $(window).bind("load", function() {
 		.setPin(".section0")
 		.addTo(controller)
 		.on("enter", function (e) {
-			$('.video-header').get(0).play();
+		
 		})
 		.on("leave", function (e) {
 			
