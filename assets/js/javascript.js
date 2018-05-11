@@ -60,6 +60,10 @@ $.fn.accordionSlider = function(item,nextLink,prevLink){
 		$(item).removeClass('hover');
 		$(this).addClass('hover');
 		currentSlide = $(this).index();
+		
+		$('.video1').get(0).pause(); 
+		$('.video1').get(0).currentTime = 0;
+		$('.video1').get(0).load();
 	});
 	
 	
@@ -288,10 +292,12 @@ $(window).bind("load", function() {
 		.setPin(".section2")
 		.addTo(controller)
 		.on("enter", function (e) {
-		
+			$('.video1').get(0).play();
 		})
 		.on("leave", function (e) {
-			
+			$('.video1').get(0).pause(); 
+			$('.video1').get(0).currentTime = 0;
+			$('.video1').get(0).load();
 		});
 	new ScrollMagic.Scene({triggerElement: '.section3', duration: defaultDuration})
 		.setTween(tween1)

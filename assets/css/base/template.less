@@ -3,8 +3,11 @@ html{overflow-x:hidden;}
 body{background:url(../../assets/img/bg.jpg) no-repeat top center; background-size:cover; background-attachment:fixed; font-size:18px; font-weight:300;}
 
 h1, h2, h3, h4, h5, h6{text-transform:uppercase; font-weight:normal; font-family: @family-secondary;}
-h2{font-size:105px; color:@primary; padding-bottom:40px;
+h2{font-size:105px; color:@primary; padding-bottom:40px; position:relative;
 	span{font-size:50px; display:block; color:#FFF;}
+	&.circles{
+		&:before{content:' '; position:absolute; left:-40px; top:40%; transform:translateY(-50%); width:350px; height:300px; background:url(../../assets/img/circle-lines.png) no-repeat center center; background-size:contain;}
+	}
 }
 
 input[type="text"], input[type="number"], input[type="email"]{padding:30px 15px; background:rgba(0, 0, 0, .1); border:0; font-size:20px; margin-bottom:30px;}
@@ -135,7 +138,7 @@ video, source{
 		.flex-title{color:rgba(255, 255, 255, .7); font-family:@family-secondary; text-transform:uppercase; font-size:35px;}
 		
 		
-		.flex-content{padding:100px;
+		.flex-content{padding:100px; z-index:2;
 			&:before{content:" "; position:absolute; top:0; left:0; bottom:0; right:0; border:2px solid rgba(255, 255, 255, .1); margin:20px;}
 			h2.small-text{font-size:65px;}
 			ul{margin:0; padding:0; margin-top:20px; padding-left:15px;
