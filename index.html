@@ -20,7 +20,9 @@
 <script type="text/javascript" src="assets/js/ScrollMagic.min.js"></script>
 <script type="text/javascript" src="assets/js/addIndicators.min.js"></script>
 <script type="text/javascript" src="assets/js/animation.gsap.js"></script>
-	
+
+<!-- MOBILE DETECTOR -->
+<script type="text/javascript" src="assets/js/detectmobilebrowser.js"></script>
 	
 </head>
 <body class="home">
@@ -82,8 +84,8 @@
     <div class="banner-inner">
       <div class="slide" id="slide1" style="background:url(assets/img/bg-banner.jpg) no-repeat top center; background-size:cover; height:100%;">
         <div class="header-video video-container">
-			<video class="video-header full" poster="" onclick="this.play()" muted loop>
-				<source src="assets/vid/bg-header.mp4" type="video/mp4">
+			<video class="video-header full" poster="" onclick="this.play()" muted loop autoplay>
+				<source data-src="assets/vid/bg-header.mp4" type="video/mp4" >
 			</video>    
 		</div>
 		<div class="slide-overlay"></div>

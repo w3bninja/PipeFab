@@ -93,6 +93,20 @@ function carouselResize(number){
 
 
 $(function () {	
+	
+	if(jQuery.browser.mobile == true){
+		
+	}else{
+		var sources = document.querySelectorAll('video.video-header source');
+		// Define the video object this source is contained inside
+		var video = document.querySelector('video.video-header');
+		for(var i = 0; i<sources.length;i++) {
+		  sources[i].setAttribute('src', sources[i].getAttribute('data-src'));
+		}
+		// If for some reason we do want to load the video after, for desktop as opposed to mobile (I'd imagine), use videojs API to load
+		video.load();
+	}
+	
 	$(".loader").css({'opacity':'1'});
 	//Hide the site until it is ready and then fade it in
 	// Add class for external links
@@ -270,7 +284,7 @@ $(window).bind("load", function() {
 		.setPin(".section0")
 		.addTo(controller)
 		.on("enter", function (e) {
-		
+			$('.video-header').get(0).play();
 		})
 		.on("leave", function (e) {
 			
