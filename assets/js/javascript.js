@@ -255,7 +255,7 @@ $(window).bind("load", function() {
 	var controller = new ScrollMagic.Controller({
 		globalSceneOptions: {
 			triggerHook: 'onLeave'
-			,addIndicators: true
+			//,addIndicators: true
 		}
 	});
 	
