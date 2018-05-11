@@ -162,11 +162,6 @@ $(function () {
 		}
 	});
 	
-	// PARALLAX
-	if ($('.parallax').length > 0) {
-		$('.parallax').parallax();
-	}
-	
 	// SMOOTH SCROLL
 	if ($('.scroll').length > 0) {
 		$(".scroll").on("click", function(event){
