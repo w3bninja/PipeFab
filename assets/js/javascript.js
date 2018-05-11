@@ -233,7 +233,6 @@ $(window).resize(function() {
 });
 
 $(window).bind("load", function() {
-	$('.header-video').load('header-video.html');
 	
 	setTimeout(function(){
 		$(".bg").animate({'opacity': '1'}, 1000);
