@@ -111,6 +111,7 @@
 }
 
 .push-body-toleft {
+	overflow-x: hidden;
     left: -240px;
 }
 

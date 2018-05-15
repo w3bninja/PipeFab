@@ -259,6 +259,7 @@ $(window).bind("load", function() {
 	
 	
 	
+	if ($(window).width() >= 992){	
 	
 	
 	// init controller
@@ -269,7 +270,7 @@ $(window).bind("load", function() {
 		}
 	});
 	
-	var defaultDuration = '1000';
+	var defaultDuration = '500';
 	
 	var tween1 = new TimelineMax()
 	.add(TweenMax.set([".map-usa"], {top: 300}))
@@ -330,7 +331,7 @@ $(window).bind("load", function() {
 		});
 
 	
-
+	}
 	
 	
 	

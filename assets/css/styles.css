@@ -1264,7 +1264,8 @@ q[lang~='sv'] q:after,
   }
 }
 /* TEMPLATE STYLES */
-html {
+html,
+body {
   overflow-x: hidden;
 }
 body {
@@ -1272,7 +1273,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
 }
 h1,
 h2,
@@ -1301,6 +1302,7 @@ h2.circles:before {
   left: -40px;
   top: 40%;
   transform: translateY(-50%);
+  opacity: .3;
   width: 350px;
   height: 300px;
   background: url(../../assets/img/circle-lines.png) no-repeat center center;
@@ -1338,7 +1340,7 @@ input[type="email"] {
   height: 200px;
 }
 .nav-mobile {
-  background: #f3ce00 !important;
+  background: #004b35 !important;
 }
 .nav-mobile .search i,
 .nav-mobile .search input {
@@ -1377,6 +1379,15 @@ input[type="email"] {
   z-index: 999;
   line-height: 40px;
 }
+.content li {
+  list-style-type: none;
+  position: relative;
+}
+.content li:before {
+  content: "\u2BC8";
+  position: absolute;
+  left: -30px;
+}
 video.full,
 source.full {
   position: absolute;
@@ -1392,11 +1403,14 @@ source.full {
   padding: 15px 30px;
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
-  font-size: 20px;
+  font-size: 25px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .sticky-bottom-menu {
   background: gray;
   overflow: hidden;
+  bottom: 30px;
+  right: 30px;
 }
 .sticky-bottom-menu .nav {
   height: 0;
@@ -1410,6 +1424,21 @@ source.full {
 .sticky-bottom-menu .back-to-top {
   position: relative;
   z-index: 2;
+}
+.arrow {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  top: 3px;
+}
+.arrow.arrowleft {
+  background: url(../../assets/img/arrow-left.svg) no-repeat top center;
+  background-size: contain;
+}
+.arrow.arrowright {
+  background: url(../../assets/img/arrow-right.svg) no-repeat top center;
+  background-size: contain;
 }
 .section {
   height: 1000px;
@@ -1446,7 +1475,7 @@ source.full {
   margin: 0 20px;
 }
 .section.section0 .category-slider .item h4 {
-  font-size: 50px;
+  font-size: 40px;
   color: rgba(255, 255, 255, 0.2);
   white-space: nowrap;
   position: absolute;
@@ -1455,21 +1484,34 @@ source.full {
   transform: translateX(-50%);
   transition: all 0.5s ease;
 }
+.section.section0 .category-slider .item.active h4 {
+  font-size: 50px;
+  color: #FFF!important;
+}
 @media (max-width: 1400px) {
   .section.section0 .category-slider .item h4 {
     font-size: 30px;
+  }
+  .section.section0 .category-slider .item.active h4 {
+    font-size: 40px;
   }
 }
 @media (max-width: 1080px) {
   .section.section0 .category-slider .item h4 {
     font-size: 25px;
-  }
-  .section.section0 .category-slider .item h4 {
     color: rgba(255, 255, 255, 0);
   }
+  .section.section0 .category-slider .item.active h4 {
+    font-size: 35px;
+  }
 }
-.section.section0 .category-slider .item.active h4 {
-  color: #FFF!important;
+@media (max-width: 768px) {
+  .section.section0 .category-slider .item h4 {
+    font-size: 15px;
+  }
+  .section.section0 .category-slider .item.active h4 {
+    font-size: 25px;
+  }
 }
 .section.section0 .slide-inner img {
   margin: 0 auto;
@@ -1553,7 +1595,7 @@ source.full {
   z-index: 2;
   max-width: 1300px;
 }
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .section.section3 .map-img {
     display: none;
   }
@@ -1571,7 +1613,7 @@ source.full {
 .section.section4 .section-content {
   padding: 80px 0;
 }
-.section.section4 .section-content form {
+.section.section4 .section-content .form {
   padding: 0 12% 0 8%;
 }
 .section.section4 .section-content img {
@@ -1654,6 +1696,7 @@ source.full {
   display: block;
   max-width: 85%;
   max-height: 75%;
+  opacity: 0.8;
 }
 @media (max-height: 1000px) {
   .flex-container .flex-slide .flex-slide .slide-img img {
@@ -1890,11 +1933,11 @@ source.full {
 .tip:before {
   content: attr(title);
   position: absolute;
-  background: #333;
-  color: #FFF;
+  background: #FFF;
+  color: #000;
   white-space: nowrap;
   text-indent: 0;
-  padding: 5px 10px;
+  padding: 1px 7px;
   text-align: left;
   border-radius: 3px;
   line-height: normal;
@@ -1915,8 +1958,8 @@ source.full {
   right: 100%;
 }
 .tip.right:before {
-  top: 0;
-  left: 100%;
+  top: 10px;
+  left: 60%;
 }
 .tip.bottom:before {
   top: 110%;
@@ -2138,7 +2181,7 @@ source.full {
     right: -300px;
   }
   .section.section1 .text {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 18px;
   }
   .section.section2 .slide-img {
