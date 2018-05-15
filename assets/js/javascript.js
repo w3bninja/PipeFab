@@ -115,7 +115,7 @@ $(function () {
 	}).addClass("external");
 
 	// Hide the site until it is ready and then fade it in
-	//$(".bg").css({'opacity':'0'});
+	$(".bg").css({'opacity':'0'});
 	
 
 	// When a link is clicked it will fade and redirect unless it is external
@@ -132,6 +132,7 @@ $(function () {
 	$('.flex-container').accordionSlider('.flex-slide','.next-flex','.prev-flex');
 	
 	$('.section').height($(window).height());
+	
 	
 	
 	
@@ -348,12 +349,18 @@ $(window).bind("load", function() {
 
 $(document).ready(function() {
 	$('.cycle-slide-active').next().addClass('active');
-	$('.cycle-slideshow').on('cycle-after', function(e, opts) {
-		//console.log(opts.slideNum);
-		var current = opts.slideNum;
-		//console.log(previous + '|' + current);
+	$('.active').next().addClass('next-active');
+	$('.cycle-slideshow').on('cycle-after', function() {
 		$('.item').removeClass('active');
+		$('.item').removeClass('next-active');
 		$('.cycle-slide-active').next().addClass('active');
+		$('.active').next().addClass('next-active');
+	});
+	$('.cycle-slideshow').on('cycle-before', function() {
+		$('.item').removeClass('active');
+		$('.item').removeClass('next-active');
+		$('.cycle-slide-active').next().addClass('active');
+		$('.active').next().addClass('next-active');
 	});
 	
 	

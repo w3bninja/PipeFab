@@ -26,6 +26,11 @@
 	
 </head>
 <body class="home">
+<div class="loader">
+	<div class="container vcenter text-center">
+		Loading...
+	</div>
+</div>
 <div class="nav-mobile cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right">
   <div class="nav-mobile">
 	<ul class="nav-accordion">
@@ -232,7 +237,7 @@
 					<div class="slide-overlay"></div>
 					<div class="slide-img"><img src="assets/img/accordion/2.png" class="img-responsive" alt="Engineering"></div>
 					<div class="slide-video-bg video-container">
-						<video class="video1 full" poster="" onclick="this.play()" muted loop>
+						<video class="video1 full" poster="" muted loop>
 							<source src="assets/vid/bg-engineering.mp4" type="video/mp4">
 						</video>
 					</div>
@@ -400,6 +405,13 @@
 				<h2 title="Connected Across the country"><span>Connected Across the country</span></h2>
 				We have the capabilities to ship pipes anywhere across the country, from California to Connecticut. Our five locations are strategically located so our clients can connect with our resources no matter where they are.			
 			</div>
+			<div class="mobile-map-nav hidden-xs hidden-md hidden-lg">
+				<div class="loc loc1"><a href="#loc1" class="fancy" rel="map-group"><div class="tip right" title="Location 1">Location 1</div></a></div>
+				<div class="loc loc2"><a href="#loc2" class="fancy" rel="map-group"><div class="tip right" title="Location 2">Location 2</div></a></div>
+				<div class="loc loc3"><a href="#loc3" class="fancy" rel="map-group"><div class="tip right" title="Location 3">Location 3</div></a></div>
+				<div class="loc loc4"><a href="#loc4" class="fancy" rel="map-group"><div class="tip right" title="Location 4">Location 4</div></a></div>
+				<div class="loc loc5"><a href="#loc5" class="fancy" rel="map-group"><div class="tip right" title="Location 5">Location 5</div></a></div>
+			</div>
 			<div class="map">
 				<div class="loc loc1"><a href="#loc1" class="fancy" rel="map-group"><div class="tip right" title="Location 1">Location 1</div></a></div>
 				<div class="loc loc2"><a href="#loc2" class="fancy" rel="map-group"><div class="tip right" title="Location 2">Location 2</div></a></div>
@@ -519,7 +531,7 @@
 								<div class="section-content">
 									<img src="assets/img/contact-text.png" class="img-responsive" alt="One Solution for your Pipe Fabrication Needs">
 									<div class="form">
-										See how our expertise can create a better customer experience for you. Contact us so we can help make your pipe dreams a reality.
+										<p>See how our expertise can create a better customer experience for you. Contact us so we can help make your pipe dreams a reality.</p>
 										<form name="contact" netlify>
 											<div class="form-group">
 												<input type="text" class="form-control" id="name" placeholder="Name">
@@ -553,14 +565,15 @@
 <div class="footer">
   <div class="footer-top">
     <div class="container-fluid clearfix">
-		<div class="pull-left">
-			<div class="logo">
-			  <a href="/" title="Turner Industries"> <img src="assets/img/logo.png" class="img-responsive" alt="Turner Industries"> </a>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="logo">
+				  <a href="/" title="Turner Industries"> <img src="assets/img/logo.png" class="img-responsive" alt="Turner Industries"> </a>
+				</div>
 			</div>
-		</div>
-		
-      	<div class="pull-right"> 
-      		<div class="copyright">© 2018, <a href="/">Turner Industries</a> | <a href="http://redsixmedia.com" target="_blank" title="Red Six Media is an award-winning, full-service creative agency with services ranging from custom branding and graphic design to web development and advertising.">Website Design</a> by Red Six Media.</div>
+			<div class="col-sm-6">
+				<div class="copyright">© 2018, <a href="/">Turner Industries</a> | <a href="http://redsixmedia.com" target="_blank" title="Red Six Media is an award-winning, full-service creative agency with services ranging from custom branding and graphic design to web development and advertising.">Website Design</a> by Red Six Media.</div>
+			</div>
 		</div>
     </div>
   </div>
