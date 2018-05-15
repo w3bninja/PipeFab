@@ -97,9 +97,9 @@ $(function () {
 	if(jQuery.browser.mobile == true){
 		
 	}else{
-		var sources = document.querySelectorAll('video.video-header source');
+		var sources = document.querySelectorAll('video.video-header source, video.video1 source');
 		// Define the video object this source is contained inside
-		var video = document.querySelector('video.video-header');
+		var video = document.querySelector('video.video-header, video.video1');
 		for(var i = 0; i<sources.length;i++) {
 		  sources[i].setAttribute('src', sources[i].getAttribute('data-src'));
 		}
