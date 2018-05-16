@@ -1302,7 +1302,7 @@ h2.circles:before {
   background-size: contain;
 }
 input[type="text"],
-input[type="number"],
+input[type="tel"],
 input[type="email"] {
   padding: 30px 15px;
   background: rgba(0, 0, 0, 0.1);
@@ -1322,7 +1322,7 @@ input[type="email"] {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #FFF url(http://gifimage.net/wp-content/uploads/2017/10/colorful-loader-gif-2.gif) no-repeat center center;
+  background: #FFF url(../../assets/img/loader.gif) no-repeat center center;
 }
 .bg {
   opacity: 0;
